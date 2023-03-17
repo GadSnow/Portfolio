@@ -351,6 +351,36 @@ button:hover {
     color: var(--second-main-color);
 }
 
+.alert {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #dff0d8;
+}
+
+
+/* Not Found */
+
+.section__notfound {
+    min-height: calc(100vh - 100px);
+    width: 100vw;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.notfound__title {
+    font-size: 10rem;
+    color: var(--second-color);
+}
+
+.notfound__text {
+    color: var(--second-color);
+    font-size: 5rem;
+}
+
 @media screen and (max-width: 1255px) {
     .header__nav,
     .hero,

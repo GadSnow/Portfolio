@@ -1,8 +1,20 @@
+import { useEffect, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
 import FindMe from "../components/FindMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import Confirmation from "../components/Confirmation";
 
 function Contact() {
+  const [submit, setSubmit] = useState(false);
+  const { name, email, description } = useParams();
+  const form = useRef();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    form.current.style.display = "none";
+    setSubmit(true);
+  };
+
   return (
     <>
       <Nav />
@@ -16,31 +28,28 @@ function Contact() {
             votre projet. Cela permettra aussi d'avoir un premier chiffrage au
             plus prêt du devis final.
           </p>
-          <form action="/contact" className="contact__form">
+          <form onSubmit={handleSubmit} className="contact__form" ref={form}>
             <div>
               <input
                 type="text"
                 name="name"
                 placeholder="Nom & Prénom"
-                required=""
+                required
                 minLength="3"
               />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required=""
-              />
+              <input type="email" name="email" placeholder="Email" required />
             </div>
             <textarea
               name="description"
               placeholder="Description du projet"
-              required=""
-              minLength="20"></textarea>
+              required
+              minLength="20"
+            ></textarea>
             <div className="btn">
-              <button>Obtenir un devis</button>
+              <button type="submit">Obtenir un devis</button>
             </div>
           </form>
+          {submit && <Confirmation />}
         </section>
       </div>
 

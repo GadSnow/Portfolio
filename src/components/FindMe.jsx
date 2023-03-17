@@ -10,7 +10,7 @@ function FindMe() {
         </a>
         <a href="https://www.youtube.com/" rel="noreferrer" target="_blank">
           <strong>Youtube</strong>
-          <span>twitter.com/mywebsite</span>
+          <span>youtube.com/abdoulgadiry</span>
         </a>
         <a
           href="https://www.facebook.com/abdoulgadiry.barry.1253"
@@ -18,7 +18,7 @@ function FindMe() {
           target="_blank"
         >
           <strong>Facebook</strong>
-          <span>facebook.com/mywebsite</span>
+          <span>facebook.com/abdoulgadiry</span>
         </a>
       </div>
     </section>
