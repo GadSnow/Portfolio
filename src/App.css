@@ -355,6 +355,11 @@ button:hover {
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #dff0d8;
+    height: 60px;
+    margin-top: 30px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
 }
 
 

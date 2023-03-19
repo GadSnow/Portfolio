@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import FindMe from "../components/FindMe";
 import Footer from "../components/Footer";
@@ -7,12 +8,27 @@ import Confirmation from "../components/Confirmation";
 
 function Contact() {
   const [submit, setSubmit] = useState(false);
-  const { name, email, description } = useParams();
+  const [inputs, setInputs] = useState({});
   const form = useRef();
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setInputs((values) => ({ ...values, [name]: value }));
+    console.log(inputs);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     form.current.style.display = "none";
     setSubmit(true);
+
+    axios({
+      method: "POST",
+      url: "http://localhost:80/portfolioAPI/user",
+      data: inputs,
+    });
   };
 
   return (
@@ -36,14 +52,22 @@ function Contact() {
                 placeholder="Nom & Prénom"
                 required
                 minLength="3"
+                onChange={handleChange}
               />
-              <input type="email" name="email" placeholder="Email" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                onChange={handleChange}
+              />
             </div>
             <textarea
               name="description"
               placeholder="Description du projet"
               required
               minLength="20"
+              onChange={handleChange}
             ></textarea>
             <div className="btn">
               <button type="submit">Obtenir un devis</button>
