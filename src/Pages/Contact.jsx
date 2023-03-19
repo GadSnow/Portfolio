@@ -44,7 +44,14 @@ function Contact() {
             votre projet. Cela permettra aussi d'avoir un premier chiffrage au
             plus prêt du devis final.
           </p>
-          <form onSubmit={handleSubmit} className="contact__form" ref={form}>
+          <form
+            onSubmit={handleSubmit}
+            className="contact__form"
+            ref={form}
+            name="contact"
+            data-netlify="true"
+            method="POST"
+          >
             <div>
               <input
                 type="text"

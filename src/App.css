@@ -351,7 +351,7 @@ button:hover {
     color: var(--second-main-color);
 }
 
-.alert {
+.contact__alert {
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #dff0d8;
@@ -360,6 +360,8 @@ button:hover {
     padding-left: 15px;
     display: flex;
     align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -435,6 +437,9 @@ button:hover {
     }
     .contact__form {
         grid-template-columns: 1fr;
+    }
+    .contact__alert {
+        height: auto;
     }
 }
 
