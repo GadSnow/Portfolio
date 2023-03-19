@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import FindMe from "../components/FindMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
