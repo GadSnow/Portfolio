@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import axios from "axios";
 import FindMe from "../components/FindMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -23,11 +22,11 @@ function Contact() {
     form.current.style.display = "none";
     setSubmit(true);
 
-    axios({
-      method: "POST",
-      url: "http://localhost:80/portfolioAPI/user",
-      data: inputs,
-    });
+    // axios({
+    //   method: "POST",
+    //   url: "http://localhost:80/portfolioAPI/user",
+    //   data: inputs,
+    // });
   };
 
   return (
