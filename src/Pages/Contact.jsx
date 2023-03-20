@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+// import axios from "axios";
 import FindMe from "../components/FindMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -46,9 +47,11 @@ function Contact() {
             onSubmit={handleSubmit}
             className="contact__form"
             ref={form}
-            netlify
+            name="contact"
+            data-netlify="true"
             method="POST"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <div>
               <input
                 type="text"
