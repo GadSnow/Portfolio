@@ -19,7 +19,7 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    form.current.style.display = "none";
+    // form.current.style.display = "none";
     setSubmit(true);
 
     // axios({
