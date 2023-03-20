@@ -46,8 +46,7 @@ function Contact() {
             onSubmit={handleSubmit}
             className="contact__form"
             ref={form}
-            name="contact"
-            data-netlify="true"
+            netlify
             method="POST"
           >
             <div>
