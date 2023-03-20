@@ -19,7 +19,6 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     form.current.style.display = "none";
     setSubmit(true);
 
