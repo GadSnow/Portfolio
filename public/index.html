@@ -8,6 +8,11 @@
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="description"></textarea>
+    </form>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -19,10 +24,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
-    </form>
   </body>
 </html>
