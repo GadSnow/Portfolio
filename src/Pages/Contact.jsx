@@ -5,10 +5,10 @@ import { useRef, useState } from "react";
 import FindMe from "../components/FindMe";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-// import Confirmation from "../components/Confirmation";
+import Confirmation from "../components/Confirmation";
 
 function Contact() {
-  // const [submit, setSubmit] = useState(false);
+  const [submit, setSubmit] = useState(false);
   // const navigate = useNavigate();
   const [inputs, setInputs] = useState({});
   const form = useRef();
@@ -22,9 +22,8 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
-    // form.current.style.display = "none";
-    // setSubmit(true);
+    form.current.style.display = "none";
+    setSubmit(true);
     // axios({
     //   method: "POST",
     //   url: "http://localhost:80/portfolioAPI/user",
@@ -81,7 +80,7 @@ function Contact() {
               <button type="submit">Obtenir un devis</button>
             </div>
           </form>
-          {/* {submit && <Confirmation />} */}
+          {submit && <Confirmation />}
         </section>
       </div>
 
