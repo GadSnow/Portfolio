@@ -366,7 +366,7 @@ button:hover {
 
 input::placeholder,
 textarea::placeholder {
-    color: var(--second-color);
+    color: rgb(216, 222, 222);
 }
 
 
