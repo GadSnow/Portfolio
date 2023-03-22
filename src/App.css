@@ -364,6 +364,11 @@ button:hover {
     padding-bottom: 15px;
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: var(--second-color);
+}
+
 
 /* Not Found */
 
