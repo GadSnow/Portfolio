@@ -1,5 +1,6 @@
 // import axios from "axios";
 import { useRef, useState } from "react";
+import useElementOnScreen from "../hooks/useElementOnScreen";
 // import { useNavigate } from "react-router-dom";
 // import axios from "axios";
 import FindMe from "../components/FindMe";
@@ -32,14 +33,27 @@ function Contact() {
     // });
   };
 
+  const topTitleRef = useRef(null);
+  const titleRef = useRef(null);
+  const text = useRef(null);
+
+  useElementOnScreen({}, topTitleRef, "reveal-visible");
+  useElementOnScreen({}, titleRef, "reveal-visible");
+  useElementOnScreen({}, form, "reveal-visible");
+  useElementOnScreen({}, text, "reveal-visible");
+
   return (
     <>
       <Nav />
       <div className="section contact__page">
         <section className="contact__card">
-          <div className="section__top__title">Obtenir un devis</div>
-          <div className="section__title">Me contacter</div>
-          <p>
+          <div className="section__top__title reveal-1" ref={topTitleRef}>
+            Obtenir un devis
+          </div>
+          <div className="section__title reveal-2" ref={titleRef}>
+            Me contacter
+          </div>
+          <p ref={text} className="reveal-2">
             Merci de donner un maximum de détail sur le projet afin que je
             puisse évaluer correctement la charge de travail que représente
             votre projet. Cela permettra aussi d'avoir un premier chiffrage au
@@ -47,7 +61,7 @@ function Contact() {
           </p>
           <form
             onSubmit={handleSubmit}
-            className="contact__form"
+            className="contact__form reveal-3"
             ref={form}
             name="contact"
             method="POST"
